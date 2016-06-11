@@ -15,4 +15,10 @@ class TestArrInt < Minitest::Test
     result=find_commonvalues(a,b)
     assert_equal(result,[2,4,12])
   end 
+  def test_find_commonvalues_nocommonel() 
+    a=[2,4,6,8,10,12,16,18]
+    b=[1,3,5,7,9,11]
+    result=find_commonvalues(a,b)
+    assert_equal(result,"no common values")
+  end
 end

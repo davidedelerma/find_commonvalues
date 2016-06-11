@@ -34,5 +34,11 @@ def find_commonvalues(arr1,arr2)
       result<<comm_value
     end
   end
-  return result
+  if (result.length>0)
+    return result
+  else
+    return "no common values"
+  end
 end
+
+#add hash method
