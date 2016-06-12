@@ -17,7 +17,7 @@ def binary_search(arr,target)
   return "value not found" 
 end
 
-def find_commonvalues(arr1,arr2)
+def find_commonvalues_binarysearch(arr1,arr2)
   arr1=arr1.uniq
   arr2=arr2.uniq
   if (arr1.length<=arr2.length)
