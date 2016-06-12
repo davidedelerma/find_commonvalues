@@ -27,5 +27,5 @@ class TestArrInt < Minitest::Test
     b=[1,3,7,5,9,12,22]
     result=find_commonvalues_hash(a,b)
     assert_equal([12,22],result)
-    end
+  end
 end
