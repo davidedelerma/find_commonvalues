@@ -23,7 +23,7 @@ def find_commonvalues(arr1,arr2)
   if (arr1.length<=arr2.length)
     arr_to_iterate=arr1
     arr_to_search=arr2
-  elsif
+  else
     arr_to_iterate=arr2
     arr_to_search=arr1
   end
@@ -41,7 +41,21 @@ def find_commonvalues(arr1,arr2)
   end
 end
 
-#add hash method
-# def find_commonvalues_hash(arr1,arr2)
-#   hash=arr.zip(arr).to_h
-# end
+# add hash method
+def find_commonvalues_hash(arr1,arr2)
+  arr1=arr1.uniq
+  arr2=arr2.uniq
+  if (arr1.length<=arr2.length)
+    arr_to_iterate=arr1
+    arr_to_search=arr2
+  else
+    arr_to_iterate=arr2
+    arr_to_search=arr1
+  end
+  hash=arr_to_search.zip(arr_to_search).to_h
+  result=[]
+  for num in arr_to_iterate
+    result<<num if (hash[num]!=nil)
+  end
+  return result
+end

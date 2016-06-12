@@ -21,9 +21,11 @@ class TestArrInt < Minitest::Test
     result=find_commonvalues(a,b)
     assert_equal(result,"no common values")
   end
+
+  def test_find_commonvalues_hash()
+    a=[2,12,6,22,10,12,16,18]
+    b=[1,3,7,5,9,12,22]
+    result=find_commonvalues_hash(a,b)
+    assert_equal([12,22],result)
+    end
 end
-# def test_find_commonvalues_hash()
-#   a=[2,12,6,22,10,12,16,18]
-#   b=[1,3,7,5,9,12,22]
-#   result=find_commonvalues_hash
-# end
